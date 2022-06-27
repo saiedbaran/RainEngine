@@ -6,8 +6,11 @@ extern RainEngine::Application* RainEngine::CreateApplication();
 
 int main(int argc, char** argv)
 {
+    RainEngine::Log::init();
+    RE_CORE_WARN("Core Debugger Initialized!");
+    RE_INFO("Client Debugger Initialized!");
+    
     auto app = RainEngine::CreateApplication();
-    printf("Initialize App: \n");
     app->Run();
     delete app;
 }
